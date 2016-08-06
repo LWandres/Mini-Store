@@ -1,5 +1,5 @@
 //Products factory
-myApp.factory('productfactory', function($http) {
+myApp.factory('productsfactory', function($http) {
     var factory = {};
 
     //gets all products for display

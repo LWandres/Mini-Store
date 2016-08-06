@@ -1,8 +1,8 @@
 //Controller for the customers view
-myApp.controller('customerscontroller', function($scope, CustomerFactory) {
+myApp.controller('customerscontroller', function($scope, customerfactory) {
 
     //Gets all Customers for display
-    CustomerFactory.index(function(data) {
+    customerfactory.index(function(data) {
         $scope.customers = data;
     });
 
@@ -13,8 +13,8 @@ myApp.controller('customerscontroller', function($scope, CustomerFactory) {
             $scope.errors = "Please pick a name that is not already in the database";
         } else {
             $scope.new_customer.createdAt = new Date();
-            CustomerFactory.create($scope.new_customer, function() {
-                CustomerFactory.index(function(data) {
+            customerfactory.create($scope.new_customer, function() {
+                customerfactory.index(function(data) {
                     $scope.customers = data;
                     $scope.new_customer = {};
                 });
@@ -24,8 +24,8 @@ myApp.controller('customerscontroller', function($scope, CustomerFactory) {
 
     //Delete a Customer from the DB
     $scope.deleteCustomer = function(customer) {
-        CustomerFactory.deleteCustomer(customer, function() {
-            CustomerFactory.index(function(data) {
+        customerfactory.deleteCustomer(customer, function() {
+            customerfactory.index(function(data) {
                 $scope.customers = data;
             });
         })

@@ -1,12 +1,12 @@
 //Controller for the Dashboard View
-myApp.controller('dashboardcontroller', function($scope, CustomerFactory, ProductFactory, OrderFactory) {
+myApp.controller('dashboardcontroller', function($scope, customerfactory, productfactory, orderfactory) {
   //Sets initial display variables - will be modified with show more links.
   $scope.products_displayNum = 5;
   $scope.customer_displayNum = 3;
   $scope.orders_displayNum = 3;
 
   //Populate all customer information
-  CustomerFactory.index(function(data) {
+  customerfactory.index(function(data) {
     $scope.customers = data;
     $scope.customers_length = $scope.customers.length;
   });
