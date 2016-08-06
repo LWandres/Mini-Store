@@ -78,7 +78,7 @@ h4{
 
     ul.partials{
       float:right;
-      font-size:1.3em;
+      font-size:1.15em;
       margin-right:3%;
       position: fixed;
       margin-left:5%;
@@ -94,10 +94,10 @@ h4{
 #searchbar{
   width:20%;
   height:200%;
-  padding:90px 3% 5% 3%;
+  padding:200px 3% 5% 3%;
   display:inline-block;
   background:rgb(35,47,62);
-  margin-top: -50px;
+  margin-top: -170px;
 }
 
 #new_input{

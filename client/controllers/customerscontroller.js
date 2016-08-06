@@ -1,6 +1,6 @@
 //Controller for the customers view
 myApp.controller('customerscontroller', function($scope, customerfactory) {
-
+    $scope.customers = {};
     //Gets all Customers for display
     customerfactory.index(function(data) {
         $scope.customers = data;
