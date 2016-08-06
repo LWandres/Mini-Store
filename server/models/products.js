@@ -8,4 +8,4 @@ var ProductsSchema = new mongoose.Schema({
 },{timestamps: true}
 );
 
-mongoose.model('Products', ProductsSchema);
+mongoose.model('products', ProductsSchema);

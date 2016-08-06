@@ -5,4 +5,4 @@ var CustomersSchema = new mongoose.Schema({
     createdAt: Date
 });
 
-mongoose.model('Customers', CustomersSchema);
+mongoose.model('customers', CustomersSchema);

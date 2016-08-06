@@ -7,4 +7,4 @@ var OrdersSchema = new mongoose.Schema({
     createdAt: Date
 });
 
-mongoose.model('Orders', OrdersSchema);
+mongoose.model('orders', OrdersSchema);
