@@ -1,0 +1,185 @@
+/*Common CSS for All Pages*/
+html{
+  font-family: 'Lato', sans-serif;
+}
+
+#container{
+  margin-top:10%;
+  font-family: 'Lato', sans-serif;
+}
+
+#main{
+  margin:0% 2% 0% 2.5%;
+  display:inline-block;
+  vertical-align: top;
+  text-align: left;
+  width:75%;
+}
+
+#title{
+    margin-left:5%;
+}
+
+#title_no_marg{
+    font-weight:900;
+}
+
+li{
+  display:inline-block;
+}
+
+ul{
+  display:inline-block;
+  padding-left:0px;
+}
+
+p{
+    text-align: center;
+    font-size:1.2em;
+    color:rgb(35,47,62);
+}
+
+h4{
+  display:inline-block;
+  color:white;
+}
+
+    .table{
+      margin-left:5%;
+      width:90%;
+      margin: 0px auto;
+    }
+
+/*Header css*/
+#header{
+  position: fixed;
+  top:0;
+  width:100%;
+  height:90px;
+  background:rgb(35, 193, 133);
+  color:white;
+}
+
+#header a{
+  color:white;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+}
+
+#header h2{
+  color: white;
+  margin-left: 5%;
+  width: 40%;
+  display: inline-block;
+  margin-top:2%;
+  font-family: 'Lato', sans-serif;
+}
+
+    ul.partials{
+      float:right;
+      font-size:1.3em;
+      margin-right:3%;
+      position: fixed;
+      margin-left:5%;
+    }
+
+    .partials li{
+      padding: 5px;
+      margin-top: 5%;
+    }
+/* End header css*/
+
+/* Button & Form Input CSS */
+#searchbar{
+  width:20%;
+  height:200%;
+  padding:90px 3% 5% 3%;
+  display:inline-block;
+  background:rgb(35,47,62);
+  margin-top: -50px;
+}
+
+#new_input{
+  margin:0% 0% 1% 5%;
+  width:100%;
+}
+
+#new_input select{
+    margin-right:2%;
+}
+
+#main > form > textarea{
+    margin: 0px;
+    width: 642px;
+    height: 100px;
+    overflow:scroll;
+}
+
+form{
+  display:inline-block;
+}
+
+input[type="button"]{
+  background: rgb(35, 193, 133);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top:3%;
+}
+
+input[type="submit"]{
+  background: rgb(35, 193, 133);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top:3%;
+}
+
+#searchbar > input[type="text"]{
+  width:100%;
+}
+
+#searchbar > input{
+    float:right;
+    padding:4%;
+}
+
+#main > form > input[type="submit"]:nth-child(10){
+    margin-left:50%;
+}
+    .newinput{
+        width:100%;
+    }
+
+    .wideinput{
+        width:30%;
+        margin-right:5%;
+    }
+
+body > div > div > input{
+  margin-left: 60%;
+}
+
+/* Page Specific CSS */
+
+/*Dashboard*/
+.recent_additions{
+  margin-left: 0%;
+  width:49%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+li.recents{
+  display:block;
+  padding-bottom:.5%;
+}
+
+.products_image{
+  width:140px;
+  height:130px;
+  padding:10px;
+  margin-right:20px;
+  border-radius:10px;
+}

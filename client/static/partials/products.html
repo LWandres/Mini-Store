@@ -1,0 +1,36 @@
+<title>Dashboard | Store </title>
+
+<body ng-controller="productscontroller">
+    <div id="container">
+        <div id="searchbar">
+            <h4>SEARCH</h4>
+            <input type="text" ng-model="filter_name" placeholder="search...">
+            <input type="button" ng-model="filter_name" value="FILTER" placeholder="search...">
+        </div>
+
+        <div id="main">
+            <h3 id="title_no_marg">ADD PRODUCT</h3><br>
+            <form class="newinput" method="post">
+                Name:<br><input type="text" class="wideinput" name="name" ng-model="new_product.name" placeholder="name...">
+                Image (url):<input type="text" class="wideinput" name="img" ng-model="new_product.url" placeholder="http://"><br><br>
+                Description:<br><textarea re-size="none" overflow="scroll" name="description" ng-model="new_product.description"></textarea><br>
+                Initial Quantity:
+                    <select name="quantity" ng-model="new_product.quantity">
+                        <option ng-repeat="quantity in quantities" value="{{quantity}}">{{quantity}}</option>
+                    </select>
+                <input type="submit" value="Create" ng-click="addProduct()"></input><br>
+            </form>
+            <hr>
+                <ul>
+                    <li ng-repeat="product in products | filter: filter_name | limitTo: products_displayNum" class="products">
+                        <img src='{{product.url}}' class="products_image" alt="png">
+                        <p>{{product.name}}</p>
+                        <p>({{product.quantity}} left)</p>
+                        <a id="productdelete" href="" ng-click="deleteProduct(product)">Remove</a>
+                    </li>
+                </ul><br>
+                <a href ng-click="more_products()" class="show">Show more</a>
+        </div>
+
+    </div>
+</body>

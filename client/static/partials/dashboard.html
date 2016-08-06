@@ -1,0 +1,39 @@
+<title>Dashboard | Store </title>
+
+<body ng-controller="dashboardcontroller">
+
+    <div id="container">
+        <div id="searchbar">
+            <h4>SEARCH</h4>
+            <input type="text" ng-model="filter_name" placeholder="search...">
+            <input type="button" ng-model="filter_name" value="FILTER" placeholder="search...">
+        </div>
+
+        <div id="main">
+            <div id="products">
+                <ul>
+                    <li ng-repeat="product in products | filter: filter_name | limitTo: products_displayNum" class="products">
+                        <img src='{{product.url}}' class="products_image" alt="png">
+                        <p>{{product.name}}</p>
+                        <p>({{product.quantity}} left)</p>
+                    </li>
+                </ul>
+                <br>
+                <a href ng-click="more_products()" class="show">Show more</a>
+            </div>
+
+            <div class="recent_additions">
+                <h3 id="title_no_marg">Recent Orders</h3>
+                <li class="recents" ng-repeat="order in orders | filter: filter_name | limitTo: orders_displayNum | orderBy: -order.createdAt">{{order.customer}} purchased {{order.quantity}} {{order.product}}...{{order.createdAt | date : 'MMMM d yyyy'}}</li><br>
+                <a href ng-click="more_orders()" class="show">Show all orders</a>
+            </div>
+
+            <div class="recent_additions">
+                <h3 id="title_no_marg">New Customers</h3>
+                <li class="recents" ng-repeat="customer in customers | filter: filter_name | limitTo: customer_displayNum | orderBy: -customer.createdAt">{{customer.name}} joined the store on {{customer.createdAt | date : 'MMMM d yyyy'}}</li><br>
+                <a href ng-click="more_customers()" class="show">Show all customers</a>
+            </div>
+
+        </div>
+    </div>
+</body>
