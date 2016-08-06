@@ -4,7 +4,7 @@ myApp.controller('orderscontroller', function($scope,orderfactory, customerfacto
                         26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50];
 
     //Get all orders for display
-    OrderFactory.index(function(data) {
+    orderfactory.index(function(data) {
         $scope.orders = data;
     })
 
@@ -22,9 +22,9 @@ myApp.controller('orderscontroller', function($scope,orderfactory, customerfacto
 //Function Calls
     $scope.addOrder = function() {
         $scope.newOrder.createdAt = new Date();
-        OrderFactory.create($scope.newOrder, function() {
+        orderfactory.create($scope.newOrder, function() {
             //Get all orders for view
-            OrderFactory.index(function(data) {
+            orderfactory.index(function(data) {
                 $scope.orders = data;
                 $scope.newOrder = {};
             })
