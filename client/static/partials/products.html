@@ -23,7 +23,7 @@
             <hr>
                 <ul>
                     <li ng-repeat="product in products | filter: filter_name | limitTo: products_displayNum" class="products">
-                        <img src='{{product.url}}' class="products_image" alt="png">
+                        <img ng-src='{{product.url}}' class="products_image" alt="png">
                         <p>{{product.name}}</p>
                         <p>({{product.quantity}} left)</p>
                         <a id="productdelete" href="" ng-click="deleteProduct(product)">Remove</a>
