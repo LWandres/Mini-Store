@@ -1,5 +1,5 @@
 //Controller for the Dashboard View
-myApp.controller('dashboardcontroller', function($scope, customerfactory, productfactory, orderfactory) {
+myApp.controller('dashboardcontroller', function($scope, customerfactory, productsfactory, orderfactory) {
   //Sets initial display variables - will be modified with show more links.
   $scope.products_displayNum = 5;
   $scope.customer_displayNum = 3;
@@ -12,7 +12,7 @@ myApp.controller('dashboardcontroller', function($scope, customerfactory, produc
   });
 
   //Populate all product information
-  ProductFactory.getproducts(function(data) {
+  productsfactory.getproducts(function(data) {
     $scope.products= data;
     $scope.products_length = $scope.products.length;
   });
