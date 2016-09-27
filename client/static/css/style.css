@@ -1,19 +1,24 @@
 /*Common CSS for All Pages*/
 html{
   font-family: 'Lato', sans-serif;
+  background-color: rgb(35,47,62);
 }
 
 #container{
   margin-top:10%;
   font-family: 'Lato', sans-serif;
+  background: rgb(35, 47, 62);
 }
 
 #main{
+  background: white;
   margin:0% 2% 0% 2.5%;
+  padding-bottom:5%;
   display:inline-block;
   vertical-align: top;
   text-align: left;
-  width:75%;
+  width:70%;
+  border-radius: 10px;
 }
 
 #title{
@@ -22,6 +27,10 @@ html{
 
 #title_no_marg{
     font-weight:900;
+    background: rgb(35, 193, 133);
+    color: white;
+    padding:2%;
+    margin-top:0px;
 }
 
 li{
@@ -55,7 +64,7 @@ h4{
   position: fixed;
   top:0;
   width:100%;
-  height:90px;
+  height:80px;
   background:rgb(35, 193, 133);
   color:white;
 }
@@ -97,11 +106,10 @@ h4{
   padding:200px 3% 5% 3%;
   display:inline-block;
   background:rgb(35,47,62);
-  margin-top: -170px;
+  margin-top: -100px;
 }
 
 #new_input{
-  margin:0% 0% 1% 5%;
   width:100%;
 }
 
@@ -118,6 +126,7 @@ h4{
 
 form{
   display:inline-block;
+  padding-left:5%;
 }
 
 input[type="button"]{
@@ -161,6 +170,10 @@ body > div > div > input{
   margin-left: 60%;
 }
 
+.table>thead>tr>th{
+    background:rgb(35, 193, 133);
+    color:white;
+}
 /* Page Specific CSS */
 
 /*Dashboard*/

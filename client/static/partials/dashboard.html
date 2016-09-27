@@ -11,6 +11,7 @@
 
         <div id="main">
             <div id="products">
+                <h3 id="title_no_marg">Product Dashboard</h3>
                 <ul>
                     <li ng-repeat="product in products | filter: filter_name | limitTo: products_displayNum" class="products">
                         <img ng-src="{{product.url}}" class="products_image" alt="png">
