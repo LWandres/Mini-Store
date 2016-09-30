@@ -31,9 +31,9 @@ module.exports = (function() {
                         } else {
                             res.json(results);
                         }
-                    })
+                    });
                 }//ends else statement
-            }) //ends create function
+            }); //ends create function
         },//end products add function
 
         //delete a product
@@ -53,9 +53,9 @@ module.exports = (function() {
                         } else {
                             res.json(results);
                         }
-                    })
+                    });
                 }
-            })
+            });
         }
-    } //Closes the return
+    };//Closes the return
 })();
