@@ -5,4 +5,4 @@ Technologies: MEAN Stack (Mongo, Express.js, AngularJS, Node.js), Mongoose, HTML
 
 Involvement: Individual Project - Full Stack Web Developer
 
-<img src="/static/assets/images/Mini-Store.png" alt="Mini-Store.png">
+<img src="client/static/assets/images/Mini-Store.png" alt="Mini-Store.png">
